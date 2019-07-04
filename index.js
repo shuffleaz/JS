@@ -1,88 +1,69 @@
-// var number = 5;
+/* String - Slice */
+
+// var text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quidem ratione pariatur recusandae, quod consequuntur quae molestiae a asperiores voluptas obcaecati fugiat accusamus corrupti debitis natus architecto dolores. Modi, consectetur!";
+// var netice = text.slice(6, 56);
+// console.log(netice);
+
+/* Break */
+// var number;
 // var number2 = 10;
 
-// if(number < number2) {
-//     console.log('Dəyər: ' + number);
-//     number++;
-//     console.log('Dəyər: ' + number);
+// for (number = 0; number < 20; number++) {
+//     if(number === 14) {
+//         continue;
+//     }
+//     console.log("Rəqəmim " + number);
 // }
 
-// while(number < number2) {
-//     number++; // 10
-//     console.log(number); //5dəfə konsol log işlədi
-// }
-
-/* Numbers - Rəqəmlər */
-// var name = "Agshin";
-// console.log('Mənim adım ' + name);
-
-var numberOne = "19";
-var numberTwo = 90;
-var netice = numberOne + numberTwo;
-var neticeninTipi = typeof(netice); // Nəticənin tipini öyrənmək (string, number, boolean)
-
-var qaliq = 9;
-var round = Math.round(qaliq); // Qalıq hansına yaxındırsa ona yuvarla
-var floor = Math.floor(qaliq); // Alta yuvarla
-var ceil = Math.ceil(qaliq); // Üstə yuvarla
-var max = Math.max(19,80,5,23); // Maksimum dəyəri seç
-var min = Math.min(19,80,5,23); // Minimum dəyəri seç
-var PI = Math.PI; // Pi Sayısı
-
-/* NaN - Not A Number - Bu Rəqəm Deyil */
-
-var deyer = 1990;
-
-/* NaN - negativ elementdi. */
-/* ! - pozitivliyi negativ eləmək üçün istifadə olunur */
-
-// if(isNaN(deyer)) {
-//     console.log(deyer +' rəqəm deyil!')
-// } else {
-//     console.log(deyer +' rəqəmdir!')
+// while(number2 < 20) {
+//     number2++;
+//     if(number2 === 15) {
+//         continue;
+//     }
+//     console.log("Rəqəmim " + number2);
 // }
 
 
-// let status = false;
-// if(status === false) {
-//     console.log(status);
-//     console.log('Bərabərdir!')
-// } else {
-//     console.log(status);
-//     console.log('Bərabər deyil!')
-// }
+/* Birinci Function */
+function salamlama(){
+    console.log('Salam, Azerbaycan!');
+}
+/* İkinci Function */
+function hesablama(firstNumber, secondNumber, process) {
+    if(process == "+"){
+        console.log(firstNumber + secondNumber)
+    } else if(process == "-") {
+        console.log(firstNumber - secondNumber)
+    } else if(process == "/") {
+        console.log(firstNumber / secondNumber)
+    } else if(process == "*") {
+        console.log(firstNumber * secondNumber)
+    }
+}
 
-// let status2 = false;
-// if(!status2) {
-//     console.log(status2);
-//     console.log('Bərabərdir!')
-// } else {
-//     console.log(status2);
-//     console.log('Bərabər deyil!')
-// }
+// hesablama(18, 10, "+");
+
+function sifreniYoxla(password) {
+    if(password == 123456) {
+        console.log('Təbriklər! Daxil Oldunuz!')
+    } else {
+        console.log('Bir daha yoxlayın!')
+    }
+}
+
+function sozuTap(soz, birinci, ikinci) {
+    var netice = soz.slice(birinci, ikinci);
+    console.log(netice);
+}
+
+// sozuTap('sajkfhasjkfhsajkfhjashfjkashfajksfhaksj hjksahfkj ash', 3, 24);
 
 
-/* String - Mətn */
-var text = "Salam, 'Azərbaycan'!" //Alternativ 1
-var text = "Salam, \"Azərbaycan\"!" //Alternativ 2
-var olke = "Azərbaycan!";
-var salamOlkeText = "Salam " + olke;
-var yazininUzunlugu = salamOlkeText.length;
+function log(text) {
+    console.log(text)
+}
 
-var uzunText = "Salam, Azərbaycan Respublikası Vətəndaşları və digərləri!"
-
-var uzunTextYoxla = uzunText.indexOf('Salam1');
-
-var uppercase = uzunText.toUpperCase();
-var lowercase = uzunText.toLowerCase();
-
-
-
-console.log(lowercase);
-
-// if(uzunTextYoxla === -1) {
-//     console.log('Xeyir mövcud deyil!')
-// } else {
-//     console.log('Bəli bu yazı mətndə mövcuddur.')
-// }
-
+function log(text) {
+  var loglama = text;
+  return loglama
+}
