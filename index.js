@@ -1,84 +1,62 @@
-// function hesablama(a, b = 1) {
-//     return a * b;
-// }
+// İstifadəçi Qeydiyyatı
 
-// function status(userStatus = false) {
-//     if(userStatus == true) {
-//         return 'Online!'
-//     } else {
-//         return 'Offline';
+// İstifadəçi
+
+// var name;
+// var lastName;
+// var email;
+// var age;
+// var bio;
+
+// var User = {
+//     name: "Agshin",
+//     lastName: "Rajabov",
+//     age: 28,
+//     email: "akorecebov@gmail.com",
+//     bio: "Mətn",
+//     save: function() {
+//         console.log(this.name + ' ' + this.lastName + ' datanın yaddaşına verildi!');
 //     }
 // }
 
-// var istifadeciVeziyyeti = status();
 
-// document.write(istifadeciVeziyyeti);
-// // Offline // false
-
-
-// console.log(hesablama(6,5));
-
-// Mercedes
-// E220
-// CLA10
-// GL120
-// 4 teker
-// Benzin, Diesel
-// 
-
-// var car = new Object();
-// car.marka = "Merecedes";
-// car.model = 'CLA120';
-// car.petron = 'Benzin';
-// car.wheels = 4;
-// car.speed = 60;
-// car.drive = function() {
-//     console.log(car.marka + ' markalı və ' + car.model + ' model maşın ' + car.speed + ' ilə gedir');
-// }
-// car.temir = function(status = false) {
-//     if(status == true) {
-//         console.log('Maşın Təmirə getdi.');
-//     } else {
-//         console.log('Masin temirde deyil!')
-//     }
+// function createUser(name, surname, email, password) {
+// //    var user = {}; //Obyekt
+// //    user.name = name;
+// //    user.surname = surname;
+// //    user.email = email;
+// //    user.pass = password;
+//     var user = {
+//         name: name,
+//         surname: surname,
+//         email: email,
+//         pass: password,
+//         saveMysql : function() {
+//             alert(user.name + ' ' + user.surname + ' datanın yaddaşına verildi!');
+//         }
+//     };
+//     return user;
 // }
 
-// car.marka = 'BMW'
-// car.model = 'Z3';
-// car.speed = 120;
-// console.log(car.drive());
-// console.log(car.temir(true));
+// var istifadeci = createUser(userName, 'Babayev', 'nicat@gmail.com', 123456);
+// console.log(istifadeci.saveMysql());
 
-
-// var insan = {
-//     adi = "Agshin",
-//     soyadi = "Rajabov",
-//     yas = 28,
-//     adSoyad = function() {
-        
-//     }
-// }
-
-var insan = {
-    adi: "Agshin",
-    soyad: "Rajabov",
-    yas: 28,
-    adSoyad: function() {
-        return this.adi + ' ' + this.soyad;
+function User(firstName, lastName, age, gender, hobbies) {
+    this.name = {
+        first: firstName,
+        last: lastName
+    }
+    this.age = age;
+    this.gender = gender;
+    this.hobbies = hobbies;
+    this.bio = function() {
+        alert(this.name.first + ' ' + this.name.last + ' adlı istifadəçimiz ' + this.hobbies[1] + ' və ' + this.hobbies[2] + ' sevir!');
     }
 }
 
-
-var insan = new Object()
-insan.adi = "Agshin"
-insan.soyad = "Rajabov"
-insan.yas = 28,
-insan.adSoyad = function() {
-    return this.adi + ' ' + this.soyad;
-}
+var istifadeci = new User('Agshin', 'Rajabov', 28, 'kişi', ['kitab oxumaq', 'kodlaşdırma', 'alternativ rock']);
+var istifadeci2 = new User('Nicat', 'Babayev', 32, 'kişi', ['kitab oxumaq', 'kodlaşdırma', 'alternativ rock']);
 
 
-console.log(insan.adSoyad());
-
-console.log(insan.soyad);
-console.log(insan["soyad"]);
+console.log(istifadeci.name.first);
+console.log(istifadeci2.name.last);
