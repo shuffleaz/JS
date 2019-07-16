@@ -1,0 +1,71 @@
+@import url('../fontawesome/css/all.min.css');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'); */
+
+.container {
+    display: flex;
+    justify-content: center;
+    
+    margin-top:50px;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin-bottom:50px;
+
+    /* Hoverla İşləyir */
+    /* transition-property: all;
+    transition-delay: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; */
+
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover {
+    background-color:skyblue;
+    cursor: pointer;
+    /* transform: rotate(30deg) scale(1.2); */
+}
+
+
+
+.box2 {
+    width: 180px;
+    height: 180px;
+    background-color: lightgreen;
+    animation-name: yoxOlma;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    /* animation-iteration-count: 2; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes yoxOlma {
+    
+    0% {
+        margin-top:0px;
+    }
+
+    30% {
+        margin-top:150px;
+    }
+
+    50% {
+        margin-left:150px;
+    }
+
+    80% {
+        margin-top:-150px;
+    }
+
+    100% {
+        margin-left:-150px;
+    }
+}
+
